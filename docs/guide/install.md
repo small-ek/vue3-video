@@ -1,12 +1,12 @@
-[![Version](https://img.shields.io/npm/dt/vue3-video-play.svg?style=flat-square)](https://www.npmjs.com/package/vue3-video)
-[![Downloads](https://img.shields.io/npm/v/vue3-video-play.svg?style=flat-square)](https://www.npmjs.com/package/vue3-video)
-[![GitHub stars](https://img.shields.io/github/stars/small-ek/vue3-video-play.svg?style=flat-square)](https://github.com/xdlumia/vue3-video/stargazers)
-[![GitHub issues](https://img.shields.io/github/issues/xdlumia/vue3-video-play.svg?style=flat-square)](https://github.com/small-ek/vue3-video/issues)
-[![GitHub forks](https://img.shields.io/github/forks/xdlumia/vue3-video-play.svg?style=flat-square)](https://github.com/small-ek/vue3-video/network)
-[![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg?style=flat-square)](https://github.com/small-ek/vue3-video)
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://github.com/small-ek/vue3-video)
+[![Version](https://img.shields.io/npm/dt/vue3-video-play.svg?style=flat-square)](https://www.npmjs.com/package/vue3-video-play)
+[![Downloads](https://img.shields.io/npm/v/vue3-video-play.svg?style=flat-square)](https://www.npmjs.com/package/vue3-video-play)
+[![GitHub stars](https://img.shields.io/github/stars/xdlumia/vue3-video-play.svg?style=flat-square)](https://github.com/xdlumia/vue3-video-play/stargazers)
+[![GitHub issues](https://img.shields.io/github/issues/xdlumia/vue3-video-play.svg?style=flat-square)](https://github.com/xdlumia/vue3-video-play/issues)
+[![GitHub forks](https://img.shields.io/github/forks/xdlumia/vue3-video-play.svg?style=flat-square)](https://github.com/xdlumia/vue3-video-play/network)
+[![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg?style=flat-square)](https://github.com/xdlumia/vue3-video-play)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://github.com/xdlumia/vue3-video-play)
 
-[![NPM](https://nodei.co/npm/vue3-video-play.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/vue3-video)
+[![NPM](https://nodei.co/npm/vue3-video-play.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/vue3-video-play)
 
 
 <span style="color:#cb3837"> **必须使用 vue@3.2.2及以上版本**</span>
@@ -24,10 +24,11 @@
 8. 支持移动端，移动端会自动调用自带视频播放器
 9. 支持hls视频流播放，支持直播
 10. hls播放支持清晰度切换
+# 主页示例
 
 
 
-## 近期更新 v1.3.1-beta.3 🎉
+## 近期更新 v1.3.1-beta.2 🎉
 - 新增: 支持hls视频流播放 
 - 新增: 新增画质切换，需视频流支持
 - 新增: 新增画音视切换，需视频流支持
@@ -59,9 +60,9 @@ import { createApp } from 'vue'
 import App from './App.vue'
 let app = createApp(App)
 
-import vue3Video from 'vue3-video' // 引入组件
+import vue3videoPlay from 'vue3-video' // 引入组件
 import 'vue3-video/dist/style.css' // 引入css
-app.use(vue3video)
+app.use(vue3videoPlay)
 
 app.mount('#app')
 ```
@@ -71,7 +72,7 @@ app.mount('#app')
 ```js
 // require style
 import 'vue3-video/dist/style.css'
-import { videoPlay } from 'vue-video'
+import { videoPlay } from 'vue-video-play'
 export default {
   components: {
     videoPlay
@@ -87,7 +88,7 @@ export default {
 ```vue
 <template>
   <div>
-    <vue3Video v-bind="options" poster='https://go.dreamwq.com/videos/ironMan.jpg'/>
+    <vue3VideoPlay v-bind="options" poster='https://go.dreamwq.com/videos/ironMan.jpg'/>
   </div>
 </template>
 
@@ -125,7 +126,7 @@ const options = reactive({
 ```vue
 <template>
   <div>
-    <vue3Video v-bind="options" poster='https://go.dreamwq.com/videos/ironMan.jpg'/>
+    <vue3VideoPlay v-bind="options" poster='https://go.dreamwq.com/videos/ironMan.jpg'/>
   </div>
 </template>
 
@@ -156,7 +157,7 @@ const options = reactive({
 ```vue
 <template>
   <div>
-    <vue3Video v-bind="options" poster='https://go.dreamwq.com/videos/ironMan.jpg'/>
+    <vue3VideoPlay v-bind="options" poster='https://go.dreamwq.com/videos/ironMan.jpg'/>
   </div>
 </template>
 
@@ -187,7 +188,7 @@ const options = reactive({
 ```vue
 <template>
   <div>
-      <vue3Video 
+      <vue3VideoPlay 
       width="800px"
       title="钢铁侠"
       :src="options.src"
@@ -341,7 +342,7 @@ vue3-video支持video原生所有事件  [video默认事件](https://segmentfaul
 | F          | 全屏/退出全屏                 |
 # Author
 
-[XiangLong](http://wpa.qq.com/msgrd?v=3&uin=56494565&site=qq&menu=yes)
+[xdlumia](https://dreamwq.com)
 
 # 点个start
 
