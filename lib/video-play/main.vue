@@ -583,12 +583,12 @@ onMounted(() => {
     state.dVideo.play()
     nextTick(() => {
         console.log(clickButton.value)
-        // clickButton.value.click()
+        clickButton.value.click()
     })
 });
-setTimeout(value=>{
-    clickButton.value.click()
-},1000)
+// setTimeout(value=>{
+//     clickButton.value.click()
+// },1000)
 defineExpose({
     play: playHandle, //播放
     pause: pauseHandle, //暂停

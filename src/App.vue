@@ -20,7 +20,7 @@ const options = reactive({
     color: "#409eff", //主题色
     title: '', //视频名称
     src: "https://www.runoob.com/try/demo_source/movie.mp4", //视频源
-    muted: false, //静音
+    muted: true, //静音
     webFullScreen: false,
     speedRate: ["0.75", "1.0", "1.25", "1.5", "2.0"], //播放倍速
     autoPlay: true, //自动播放
