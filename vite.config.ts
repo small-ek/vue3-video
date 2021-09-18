@@ -1,10 +1,3 @@
-/*
- * @Author: web.王晓冬
- * @Date: 2021-08-19 10:25:40
- * @LastEditors: web.王晓冬
- * @LastEditTime: 2021-09-01 11:28:11
- * @Description: file content
- */
 const path = require('path')
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
@@ -13,6 +6,7 @@ import vue from '@vitejs/plugin-vue'
 export default defineConfig({
   plugins: [vue()],
   server: {
+    host: '0.0.0.0',
     port: 3005,
     open: true,
     // 反向代理

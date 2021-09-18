@@ -4,7 +4,7 @@
   </div>-->
   <div style="text-align: center">
     <button
-      @click="options.src = 'https://litlive-public-resources.s3-us-west-1.amazonaws.com/images/9cafc8c04946012a273a66ec17c17b14509e21905d9329c1e880998464be513d.mp4'"
+      @click="options.src = 'https://litlive-public-resources.s3-us-west-1.amazonaws.com/images/6169ba101c316e057b07528f20ad7c3fdc12f56ddce53b58f2cd8e0ff1b38bbc.mp4'"
     >{{ options.src }}</button>
     <videoPlay ref="video" style="display: inline-block; width: 100%" v-bind="options" />
   </div>
@@ -19,7 +19,7 @@ const options = reactive({
     height: '450px', //播放器高度
     color: "#409eff", //主题色
     title: '', //视频名称
-    src: "https://litlive-public-resources.s3-us-west-1.amazonaws.com/images/9cafc8c04946012a273a66ec17c17b14509e21905d9329c1e880998464be513d.mp4", //视频源
+    src: "https://litlive-public-resources.s3-us-west-1.amazonaws.com/images/6169ba101c316e057b07528f20ad7c3fdc12f56ddce53b58f2cd8e0ff1b38bbc.mp4", //视频源
     muted: false, //静音
     webFullScreen: false,
     speedRate: ["0.75", "1.0", "1.25", "1.5", "2.0"], //播放倍速
