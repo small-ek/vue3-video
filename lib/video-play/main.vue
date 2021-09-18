@@ -37,7 +37,9 @@
                 :src="props.src"
                 :poster="props.poster"
                 :autoplay="props.autoPlay"
-            >Your browser does not support the Video tag.
+            >
+                <source :src="props.src" type="video/mp4">
+                <source :src="props.src" type="video/ogg">
             </video>
         </div>
         <!-- 缓冲动画 -->
@@ -221,7 +223,7 @@
             </div>
         </div>
     </div>
-
+    <button ref="clickButton" style="width: 100px;height: 100px;background: red" @click="test">测试</button>
 </template>
 <script lang="ts">
 export default {
@@ -271,6 +273,7 @@ const refPlayerWrap: Ref<HTMLElement> = ref(null); //wrap
 const refdVideo: Ref<HTMLElement> = ref(null); // 视频播放器
 const refPlayerControl: Ref<HTMLElement> = ref(null); //播放器控制器
 const refInput: Ref<HTMLElement> = ref(null); //快捷键操作
+const clickButton: Ref<HTMLElement> = ref(null); //点击事件
 const state = reactive({
     dVideo: null,
     ...props, //如果有自定义配置就会替换默认配置
@@ -525,7 +528,6 @@ const requestPictureInPictureHandle = () => {
 };
 
 const test = () => {
-    debugger
     state.muted = false
 };
 // 全屏按钮
@@ -578,17 +580,20 @@ watch(() => props.src, () => {
 onMounted(() => {
     state.dVideo = refdVideo;
     inputFocusHandle();
+    state.dVideo.play()
+    nextTick(() => {
+        console.log(clickButton.value)
+        // clickButton.value.click()
+    })
 });
+setTimeout(value=>{
+    clickButton.value.click()
+},1000)
 defineExpose({
     play: playHandle, //播放
     pause: pauseHandle, //暂停
     togglePlay, //暂停或播放
 });
-let conten=`<button ref="clickButton" style="width: 100px;height: 100px;background: red" @click="test">测试</button>`;
-const come= () => {
-
-}
-window.come=conten;
 </script>
 
 
